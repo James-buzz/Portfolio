@@ -36,6 +36,7 @@ const Background: React.FC = () => {
     }
     p5.background(backgroundClr);
     // p5.js graphic
+    // test
     //const rainbow = getRainbowColourAlt(rainbowLoop);
     const rainbow = fadeBetweenColors(
       { red: 0, green: 255, blue: 0 },
