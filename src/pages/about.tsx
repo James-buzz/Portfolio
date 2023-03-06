@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout/Layout';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
@@ -8,9 +7,6 @@ import ProfileImg from '../../public/assets/img/profile.png';
 export default function About() {
   return (
     <Layout title="About me">
-      <Head>
-        <title>About</title>
-      </Head>
       <div className="pt-4 sm:pt-6">
         <h1 className="text-center font-serif text-7xl font-medium text-gray-800">
           Hi
@@ -20,7 +16,7 @@ export default function About() {
             <div className="col-span-12 sm:col-span-4">
               <div className="mx-auto w-3/4 sm:w-full">
                 <Image
-                  className="hover:rotate(45) rounded-lg sepia transition-all duration-200 hover:scale-105 hover:sepia-0"
+                  className="hover:rotate(45) rounded-lg saturate-50 transition-all duration-200 hover:scale-105 hover:saturate-100"
                   src={ProfileImg}
                   alt="Profile img"
                 />
