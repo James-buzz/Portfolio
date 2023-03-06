@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50;
+}
+
+.link {
+  @apply border-b-4 border-gray-700 transition-colors duration-100 hover:bg-gray-700 hover:text-white;
+}
+
+/** Header */
+
+.header-link {
+  @apply rounded-full border-2 border-gray-100 bg-gray-50 transition-all;
+}
+.header-link-active {
+  @apply border-2 border-gray-200 text-gray-900;
+}
+.header-link:hover {
+  @apply border-gray-200;
+}
+
+.markdown {
+  ol {
+    @apply mb-6 text-xl;
+    list-style-type: lower-greek;
+
+    li {
+      @apply ml-5 mb-2 pl-2 tracking-normal;
+    }
+  }
+
+  ul {
+    @apply mb-6 text-xl;
+    list-style-type: circle;
+
+    li {
+      @apply ml-5 mb-2 pl-2 tracking-normal;
+    }
+  }
+}
