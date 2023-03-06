@@ -9,6 +9,28 @@ interface HSL {
   lightness: number;
 }
 
+const fadeBetweenColors = (
+  color1: RGB,
+  color2: RGB,
+  fadeValue: number
+): RGB => {
+  // Ensure fadeValue is within 1-256 range
+  fadeValue = Math.max(1, Math.min(256, fadeValue));
+
+  // Calculate the color values for the fadeValue
+  const red = Math.round(
+    color1.red + (color2.red - color1.red) * (fadeValue / 256)
+  );
+  const green = Math.round(
+    color1.green + (color2.green - color1.green) * (fadeValue / 256)
+  );
+  const blue = Math.round(
+    color1.blue + (color2.blue - color1.blue) * (fadeValue / 256)
+  );
+
+  return { red, green, blue };
+};
+
 const getRainbowColour = (percentage: number): RGB => {
   // Convert percentage to angle in degrees
   const angle = (percentage / 100) * 360;
@@ -123,4 +145,4 @@ const RGBtoHSL = (rgb: RGB): HSL => {
   };
 };
 
-export { getRainbowColour, getRainbowColourAlt };
+export { getRainbowColour, getRainbowColourAlt, fadeBetweenColors };
