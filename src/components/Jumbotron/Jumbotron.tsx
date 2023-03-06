@@ -16,7 +16,7 @@ const Jumbotron: React.FC = () => {
         <a className="link" href="https://www.unitedutilities.com/">
           United Utilities
         </a>
-        . I blog about my projects and share tips about my latest hikes.
+        . I blog about my projects and share my latest hikes.
       </div>
     </div>
   );
