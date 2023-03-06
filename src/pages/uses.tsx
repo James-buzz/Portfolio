@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 export default function Uses() {
   return (
-    <Layout>
+    <Layout title="Tech uses">
       <Head>
         <title>Uses</title>
       </Head>

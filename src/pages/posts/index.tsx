@@ -14,7 +14,7 @@ export default function Blog(props: Props) {
   const [selectedCategory, setSelectedCategory] = useState(-1);
   const categories = getPostCategories();
   return (
-    <Layout>
+    <Layout title={"Blog posts"}>
       <Head>
         <title>Blog posts</title>
       </Head>
