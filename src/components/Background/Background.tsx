@@ -1,5 +1,5 @@
+import { fadeBetweenColors } from '@/util/colour';
 import isMobileBrowser from '@/util/mobile';
-import { getRainbowColourAlt } from '@/util/rainbow';
 import p5Types from 'p5';
 import Sketch from 'react-p5';
 
@@ -36,7 +36,13 @@ const Background: React.FC = () => {
     }
     p5.background(backgroundClr);
     // p5.js graphic
-    const rainbow = getRainbowColourAlt(rainbowLoop);
+    //const rainbow = getRainbowColourAlt(rainbowLoop);
+    const rainbow = fadeBetweenColors(
+      { red: 0, green: 0, blue: 255 },
+      { red: 255, green: 0, blue: 0 },
+      rainbowLoop
+    );
+
     p5.stroke(
       `rgba(${rainbow.red}, ${rainbow.green}, ${rainbow.blue}, ${transparent})`
     );
