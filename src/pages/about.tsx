@@ -53,10 +53,9 @@ export default function About() {
           <div className="mt-12">
             <h3 className="font-sans text-4xl text-gray-800">Hobbies</h3>
             <div className="mt-2 font-serif text-xl font-normal leading-10 tracking-normal">
-              I enjoy attending meetups when I have time and something
-              interesting to discuss. I frequently attend MancJS and Manchester
-              Web Meetup. I am an avid hiker who appreciates discovering new
-              places and reaching new heights.
+              I enjoy attending meetups when I have time. I frequently attend
+              MancJS and Manchester Web Meetup. I am an avid hiker who
+              appreciates discovering new places and reaching new heights.
             </div>
           </div>
           <div className="mt-12">
