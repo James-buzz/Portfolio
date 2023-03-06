@@ -54,7 +54,10 @@ const Background: React.FC = () => {
       x += step
     ) {
       let y = p5.map(p5.noise(xOffset, yOffset), 0, 1, 0, canvasConstraints[1]);
-      if (isMobile) y *= 2;
+      if (isMobile) {
+        y *= 2;
+        y += 250; // fix for mobile
+      }
       p5.vertex(x, y);
       xOffset += 0.04;
     }
