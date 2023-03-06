@@ -38,8 +38,8 @@ const Background: React.FC = () => {
     // p5.js graphic
     //const rainbow = getRainbowColourAlt(rainbowLoop);
     const rainbow = fadeBetweenColors(
-      { red: 0, green: 0, blue: 255 },
-      { red: 255, green: 0, blue: 0 },
+      { red: 0, green: 255, blue: 0 },
+      { red: 0, green: 0, blue: 0 },
       rainbowLoop
     );
 
