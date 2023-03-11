@@ -15,6 +15,12 @@ type PostMeta = {
   abstract: string;
   category: PostCategory;
   date: string;
+  readingTime: {
+    text: string;
+    minutes: number;
+    time: number;
+    words: number;
+  };
 };
 
 function getPostCategories() {
