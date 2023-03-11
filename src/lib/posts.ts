@@ -7,6 +7,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import moment from 'moment';
 import path from 'path';
+import ReadingTime from 'reading-time';
 
 const FOLDER = path.join(process.cwd(), 'content', 'posts');
 
@@ -21,7 +22,7 @@ const getAllPosts = (): Post[] => {
   const posts: Post[] = fileNames.map((fileName) => {
     if (!fileName.endsWith('.mdx')) return;
     const markdownWithMeta = fs.readFileSync(path.join(FOLDER, fileName));
-    const { data: metaData } = matter(markdownWithMeta);
+    const { data: metaData, content } = matter(markdownWithMeta);
     return {
       slug: fileName.replace('.mdx', '') as string,
       meta: {
@@ -29,6 +30,7 @@ const getAllPosts = (): Post[] => {
         abstract: metaData.abstract as string,
         category: metaData.category as string,
         date: metaData.date as string,
+        readingTime: ReadingTime(content),
       },
       content: '',
     };
@@ -52,6 +54,7 @@ const getPostBySlug = (slug: string): Post => {
       abstract: metaData.abstract,
       category: metaData.category,
       date: metaData.date,
+      readingTime: ReadingTime(content),
     },
     content: content,
   };

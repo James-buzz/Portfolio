@@ -7,6 +7,7 @@ interface Props {
   date: string;
   image: any;
   slug: string;
+  readingTime?: string;
 }
 const Card: React.FC<Props> = (props) => {
   return (
@@ -28,6 +29,9 @@ const Card: React.FC<Props> = (props) => {
         <div className="mt-2 font-serif">
           <Moment format={'DD MMMM, YYYY'}>{props.date}</Moment>
         </div>
+        {props.readingTime && (
+          <div className="mt-2 font-serif text-sm">{props.readingTime}</div>
+        )}
       </div>
     </Link>
   );

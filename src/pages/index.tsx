@@ -67,6 +67,7 @@ export default function Home(props: Props) {
                     date={post.meta.date}
                     slug={post.slug}
                     image={require(`../../public/content/posts/${post.slug}/thumbnail.png`)}
+                    readingTime={post.meta.readingTime.text}
                   />
                 </div>
               ))}

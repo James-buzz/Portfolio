@@ -14,7 +14,7 @@ export default function Blog(props: Props) {
   const [selectedCategory, setSelectedCategory] = useState(-1);
   const categories = getPostCategories();
   return (
-    <Layout title={"Blog posts"}>
+    <Layout title={'Blog posts'}>
       <Head>
         <title>Blog posts</title>
       </Head>
@@ -68,6 +68,7 @@ export default function Blog(props: Props) {
                       post.slug +
                       '/thumbnail.png')}
                     key={key}
+                    readingTime={post.meta.readingTime.text}
                   />
                 </div>
               );
