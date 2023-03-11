@@ -4,6 +4,7 @@ import Code from '../MDX/Code';
 import Frame from '../MDX/Frame';
 import Heading from '../MDX/Heading';
 import Link from '../MDX/Link';
+import Notice from '../MDX/Notice';
 import Paragraph from '../MDX/Paragraph';
 
 const components = {
@@ -13,6 +14,7 @@ const components = {
   Code,
   Frame,
   Image,
+  Notice,
 };
 
 interface Props {
