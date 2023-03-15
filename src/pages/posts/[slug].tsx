@@ -74,7 +74,7 @@ export default function About(props: Props) {
                     <TableOfContents />
                   </div>
                   <div className="flex justify-right">
-                    <div className="mt-3 text-xs rounded-lg font-sans px-4 py-2 bg-gray-100">
+                    <div className="flex items-center gap-2 mt-3 text-xs rounded-lg font-sans px-4 py-2 bg-gray-100">
                       <PostViews slug={props.post.slug} /> page views
                     </div>
                   </div>
