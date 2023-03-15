@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout/Layout';
 import Markdown from '@/components/Markdown/Markdown';
+import PostViews from '@/components/PostViews/Views';
 import TableOfContents from '@/components/TOC/TOC';
 import { getFileNames, getPostBySlug } from '@/lib/posts';
 import { Post } from '@/types/Post';
@@ -16,10 +17,16 @@ interface Props {
   post: Post;
 }
 export default function About(props: Props) {
+
+
+
   const [domLoaded, setDomLoaded] = useState(false);
+
   useEffect(() => {
     setDomLoaded(true);
+    fetch(`/api/posts/increment_views?slug=${props.post.slug}`); // increment views
   }, [props.post]);
+
   return (
     <Layout title={props.post.meta.title}>
       <div className="pt-4 sm:pt-12">
@@ -65,6 +72,11 @@ export default function About(props: Props) {
                   <div className="rounded-2xl bg-gray-100 py-3 px-4 ">
                     <div className="text-lg">Table of contents</div>
                     <TableOfContents />
+                  </div>
+                  <div className="flex justify-right">
+                    <div className="mt-3 text-xs rounded-lg font-sans px-4 py-2 bg-gray-100">
+                      <PostViews slug={props.post.slug} /> page views
+                    </div>
                   </div>
                 </div>
               </div>
