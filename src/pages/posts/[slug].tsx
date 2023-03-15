@@ -37,7 +37,7 @@ export default function About(props: Props) {
           <div className="text-center font-serif text-7xl font-extrabold text-gray-700">
             {props.post.meta.title}
           </div>
-          <div className="mt-14">
+          <div className="mt-10">
             {/* Banner image - (1200x600) */}
             <div className="relative w-full" style={{ height: '560px' }}>
               <Image
