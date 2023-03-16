@@ -30,10 +30,10 @@ export default function About(props: Props) {
     <Layout title={props.post.meta.title}>
       <div className="pt-4 sm:pt-12">
         <div>
-          <div className="text-center font-serif text-gray-700">
-            <Moment format={'DD MMMM, YYYY'}>{props.post.meta.date}</Moment>
+          <div className="text-center font-sans text-gray-700">
+            <Moment format={'D MMM YY'}>{props.post.meta.date}</Moment>, {props.post.meta.category}
           </div>
-          <div className="text-center font-serif text-7xl font-extrabold text-gray-700">
+          <div className="tracking-wide text-center font-serif text-7xl transition-all font-extrabold hover:text-gray-800 text-gray-700">
             {props.post.meta.title}
           </div>
           <div className="mt-10">
