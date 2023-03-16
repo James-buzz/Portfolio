@@ -503,6 +503,11 @@
   "resolved" "https://registry.npmjs.org/@types/nprogress/-/nprogress-0.2.0.tgz"
   "version" "0.2.0"
 
+"@types/p5@^1.5.0":
+  "integrity" "sha512-EhaRGjqGcv5lKWvBUfC4Oxi2J5T1C1HuoQnJCdxJJMrRf+HTVdh7hCgBo88nHe6LbUXxkrxVj9tc1zOuemefFA=="
+  "resolved" "https://registry.npmjs.org/@types/p5/-/p5-1.5.0.tgz"
+  "version" "1.5.0"
+
 "@types/p5@1.3.3":
   "integrity" "sha512-PBSFnX6IgV6Pqlx9wocUjSkGlm1I1ymz9tEiTbdNCqig6FOGiWcVUHx13TXRTBfRIhZC9+MqqgztMsgzpueaUg=="
   "resolved" "https://registry.npmjs.org/@types/p5/-/p5-1.3.3.tgz"
@@ -2936,6 +2941,11 @@
   "resolved" "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz"
   "version" "1.4.1"
 
+"microdiff@^1.3.1":
+  "integrity" "sha512-I7/87bSf15N4nMwkiHFBHksNGDa1ijNQtvWIR09hd5ZJ4+9Y2PS9cGqP8bINB1aKcNmRKwBHKtcwUpGfr+4B/A=="
+  "resolved" "https://registry.npmjs.org/microdiff/-/microdiff-1.3.1.tgz"
+  "version" "1.3.1"
+
 "micromark-core-commonmark@^1.0.0", "micromark-core-commonmark@^1.0.1":
   "integrity" "sha512-K+PkJTxqjFfSNkfAhp4GB+cZPfQd6dxtTXnf+RjZOV7T4EEXnvgzOcnp+eSTmpGk9d1S9sL6/lqrgSNn/s0HZA=="
   "resolved" "https://registry.npmjs.org/micromark-core-commonmark/-/micromark-core-commonmark-1.0.6.tgz"
@@ -3576,6 +3586,11 @@
   "resolved" "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz"
   "version" "2.2.0"
 
+"p5@^1.5.0":
+  "integrity" "sha512-RowF+RxfVUhJm/YKXL5TCFzTqnwAIwK6W1VGs9LAqSf3PCmLz9Igbxzlf0Ry5IMV71L42wipCdH/bDiNsqAstA=="
+  "resolved" "https://registry.npmjs.org/p5/-/p5-1.6.0.tgz"
+  "version" "1.6.0"
+
 "p5@1.3.1":
   "integrity" "sha512-g7W2htgEwiAEGcl0WHccAJKbunUJwrUojUSR9+KihphJ33p5VpDdh1K8pDx4ppYjOr/lVEXaZ1XXDj27nwlNOg=="
   "resolved" "https://registry.npmjs.org/p5/-/p5-1.3.1.tgz"
@@ -3813,7 +3828,12 @@
     "minimist" "^1.2.0"
     "strip-json-comments" "~2.0.1"
 
-"react-dom@^16 || ^17 || ^18", "react-dom@^18.2.0", "react-dom@>= 17.0.1", "react-dom@>=16.0.0", "react-dom@>=16.x <=18.x", "react-dom@18.2.0":
+"react-circular-input@^0.2.4":
+  "integrity" "sha512-zIWzZCrjewvE774tJSH+7iwkf9AuBQOgniS5JZJYFOxjDPr8OzGfPCBrPLdQ3mT3gnBbgb4GnF5k7/cdrFqrvA=="
+  "resolved" "https://registry.npmjs.org/react-circular-input/-/react-circular-input-0.2.4.tgz"
+  "version" "0.2.4"
+
+"react-dom@^16 || ^17 || ^18", "react-dom@^18.2.0", "react-dom@>= 16.8.0", "react-dom@>= 17.0.1", "react-dom@>= 17.0.2", "react-dom@>=16.0.0", "react-dom@>=16.x <=18.x", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -3836,6 +3856,14 @@
   "resolved" "https://registry.npmjs.org/react-moment/-/react-moment-1.1.3.tgz"
   "version" "1.1.3"
 
+"react-p5-wrapper@^4.1.0":
+  "integrity" "sha512-3p4oBQJnQmBrdQSeD2aUOCs5fQTmmsc4xq+kofy1Fp2G8fdY7n6hUmQua2sY1tyORpwXnrCyXkxLxQxz0OwCKA=="
+  "resolved" "https://registry.npmjs.org/react-p5-wrapper/-/react-p5-wrapper-4.1.0.tgz"
+  "version" "4.1.0"
+  dependencies:
+    "microdiff" "^1.3.1"
+    "p5" "^1.5.0"
+
 "react-p5@^1.3.33":
   "integrity" "sha512-CCfkGksk5H9ze6YMAg9vj+pQJUIDyU334M9aeeb9V7nRk6bjUPNy5tp74PKGRgXu2UqBoZYH04b25NWx7Y9t0w=="
   "resolved" "https://registry.npmjs.org/react-p5/-/react-p5-1.3.33.tgz"
@@ -3845,7 +3873,7 @@
     "opencollective-postinstall" "2.0.2"
     "p5" "1.3.1"
 
-"react@*", "react@^16 || ^17 || ^18", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8||^17||^18", "react@^18.2.0", "react@>= 16.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17.0.1", "react@>=16", "react@>=16.0.0", "react@>=16.x <=18.x", "react@18.2.0":
+"react@*", "react@^16 || ^17 || ^18", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8||^17||^18", "react@^18.2.0", "react@>= 16.0.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17.0.1", "react@>= 17.0.2", "react@>=16", "react@>=16.0.0", "react@>=16.x <=18.x", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
