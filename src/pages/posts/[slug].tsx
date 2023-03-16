@@ -1,3 +1,4 @@
+import EmojiReactions from '@/components/EmojiReactions/EmojiReactions';
 import Layout from '@/components/Layout/Layout';
 import Markdown from '@/components/Markdown/Markdown';
 import PostViews from '@/components/PostViews/Views';
@@ -5,6 +6,7 @@ import TableOfContents from '@/components/TOC/TOC';
 import { getFileNames, getPostBySlug } from '@/lib/posts';
 import { Post } from '@/types/Post';
 import { getRGBDataURL } from '@/util/blur';
+import { getUserId } from '@/util/userId';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { serialize } from 'next-mdx-remote/serialize';
 import Image from 'next/image';
@@ -19,12 +21,15 @@ interface Props {
 
 export default function About(props: Props) {
 
+  const [userId, setUserId] = useState("");
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
+    setUserId(getUserId());
     setDomLoaded(true);
     fetch(`/api/posts/increment_views?slug=${props.post.slug}`); // increment views
   }, [props.post]);
+
 
   return (
     <Layout title={props.post.meta.title}>
@@ -83,14 +88,14 @@ export default function About(props: Props) {
                 </div>
               </div>
               <div className="col-span-12 md:col-span-3">
-                <div className="sticky top-4">
-                  {/* Like buttons */}
-
+                <div className="sticky top-4 mt-2 sm:mt-0">
                   {/* Table of contents */}
-                  <div className="rounded-2xl bg-gray-100 py-3 px-4 ">
+                  <div className="rounded-2xl bg-gray-100 py-3 px-4 mt-2 mb-4">
                     <div className="text-lg">Table of contents</div>
                     <TableOfContents />
                   </div>
+                  {/* Like buttons */}
+                  <EmojiReactions userId={userId} postSlug={props.post.slug} />
                 </div>
               </div>
             </div>
