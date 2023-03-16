@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+code {
+  position: relative;
+}
+
+.language-ts:after {
+  content: 'typescript';
+  @apply absolute top-2 right-2 rounded-md bg-gray-100 px-2 py-1 font-sans text-xs font-light tracking-wider text-gray-500;
+}
+
 body {
   @apply bg-gray-50;
 }
