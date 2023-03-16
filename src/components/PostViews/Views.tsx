@@ -1,3 +1,4 @@
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import useSWR from 'swr';
 
 interface Props {
@@ -13,9 +14,17 @@ const PostViews = (props: Props) => {
     const { data } = useSWR(`/api/posts/get_views?slug=${props.slug}`, fetcher);
     return (
         <>
-            {data ? (<>{data.views}</>) : (<>0</>)}
+            {data ? (<>
+                {numberWithCommas(data.views)}
+            </>) : (<>
+                <AiOutlineLoading3Quarters className="animate-spin w-3 h-3" />
+            </>)}
         </>
     )
+}
+
+function numberWithCommas(num: number) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default PostViews;

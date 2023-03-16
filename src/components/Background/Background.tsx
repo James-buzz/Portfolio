@@ -15,6 +15,7 @@ const Background: React.FC = () => {
       window.innerWidth,
       document.documentElement.scrollHeight
     ).parent(canvasParentRef);
+    p5.frameRate(60);
     p5.noFill();
   };
 
@@ -45,11 +46,18 @@ const Background: React.FC = () => {
   const draw = (p5: p5Types) => {
     p5.background(249, 250, 251, 10);
 
-    const color = `rgba(255, 87, 51, 0.1)`;
-
     for (let i = 0; i < clusterCount; i++) {
       let baseX = p5.random(0, p5.width);
       let baseY = p5.random(0, p5.height);
+
+      // Calculate the distance between the mouse and the base point of the mountain
+      let distance = p5.dist(p5.mouseX, p5.mouseY, baseX, baseY);
+
+      // Set the alpha value based on the distance
+      let alpha = distance < 100 ? 0.5 : 0.1;
+
+      const color = `rgba(87, 200, 255, ${alpha})`;
+
       drawMountain(p5, baseX, baseY, color);
     }
 
@@ -68,12 +76,8 @@ const Background: React.FC = () => {
   };
 
   return (
-    <Sketch
-      className="absolute top-0 left-0 z-0 w-full overflow-hidden"
-      windowResized={resize}
-      setup={setup}
-      draw={draw}
-    />
+    // @ts-ignore
+    <Sketch className="absolute top-0 left-0 z-0 w-full overflow-hidden" windowResized={resize} setup={setup} draw={draw} />
   );
 };
 

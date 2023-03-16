@@ -25,10 +25,10 @@ const Layout: React.FC<Props> = (props) => {
         className="relative flex min-h-screen flex-col justify-between"
       >
         <div>
-          <header className="mx-auto max-w-6xl px-4 pt-6 pb-6">
+          <header className="mx-auto max-w-6xl px-6 pt-6 pb-6">
             <Header />
           </header>
-          <main className="mx-auto max-w-6xl px-4 pr-6 sm:pr-4">
+          <main className="mx-auto max-w-6xl px-6 pr-6 sm:pr-4">
             {props.children}
           </main>
         </div>

@@ -5,7 +5,7 @@ interface Props {
 const Frame: React.FC<Props> = (props) => {
   return (
     <iframe
-      className="mb-6 w-full rounded-xl"
+      className="mb-6 w-full rounded-lg"
       height={props.height}
       src={props.src}
     ></iframe>
