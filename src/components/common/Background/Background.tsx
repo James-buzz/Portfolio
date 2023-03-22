@@ -74,11 +74,13 @@ const Background: React.FC = () => {
   };
 
   return (
-    // @ts-ignore
     <Sketch
       className="absolute top-0 left-0 z-0 w-full overflow-hidden"
+      // @ts-ignore
       windowResized={resize}
+      // @ts-ignore
       setup={setup}
+      // @ts-ignore
       draw={draw}
     />
   );
