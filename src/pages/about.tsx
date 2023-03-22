@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout/Layout';
+import Layout from '@/components/common/Layout/Layout';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
@@ -6,9 +6,7 @@ import ProfileImg from '../../public/assets/img/profile.png';
 
 export default function About() {
   return (
-    <Layout
-      title="About me"
-    >
+    <Layout title="About me">
       <div className="pt-4 sm:pt-6">
         <h1 className="text-center font-serif text-7xl font-medium text-gray-800">
           Hi

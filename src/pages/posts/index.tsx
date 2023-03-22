@@ -1,5 +1,5 @@
-import PostCard from '@/components/Card/Card';
-import Layout from '@/components/Layout/Layout';
+import PostCard from '@/components/common/Card/Card';
+import Layout from '@/components/common/Layout/Layout';
 import { getAllPosts } from '@/lib/posts';
 import { getPostCategories, Post } from '@/types/Post';
 import classNames from 'classnames';

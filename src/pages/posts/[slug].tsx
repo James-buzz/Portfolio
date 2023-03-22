@@ -1,8 +1,8 @@
-import EmojiReactions from '@/components/EmojiReactions/EmojiReactions';
-import Layout from '@/components/Layout/Layout';
-import Markdown from '@/components/Markdown/Markdown';
-import PostViews from '@/components/PostViews/Views';
-import TableOfContents from '@/components/TOC/TOC';
+import Layout from '@/components/common/Layout/Layout';
+import EmojiReactions from '@/components/features/EmojiReactions/EmojiReactions';
+import Markdown from '@/components/features/Markdown/Markdown';
+import PostViews from '@/components/features/PostViews/Views';
+import TableOfContents from '@/components/features/TOC/TOC';
 import { getFileNames, getPostBySlug } from '@/lib/posts';
 import { Post } from '@/types/Post';
 import { getRGBDataURL } from '@/util/blur';
@@ -20,8 +20,7 @@ interface Props {
 }
 
 export default function About(props: Props) {
-
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState('');
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
@@ -30,15 +29,15 @@ export default function About(props: Props) {
     fetch(`/api/posts/increment_views?slug=${props.post.slug}`); // increment views
   }, [props.post]);
 
-
   return (
     <Layout title={props.post.meta.title}>
       <div className="pt-4 sm:pt-12">
         <div>
           <div className="text-center font-sans text-gray-700">
-            <Moment format={'D MMM YY'}>{props.post.meta.date}</Moment>, {props.post.meta.category}
+            <Moment format={'D MMM YY'}>{props.post.meta.date}</Moment>,{' '}
+            {props.post.meta.category}
           </div>
-          <div className="tracking-wide text-center font-serif text-7xl transition-all font-extrabold hover:text-gray-800 text-gray-700">
+          <div className="text-center font-serif text-7xl font-extrabold tracking-wide text-gray-700 transition-all hover:text-gray-800">
             {props.post.meta.title}
           </div>
           <div className="mt-10">
@@ -67,21 +66,23 @@ export default function About(props: Props) {
                 <div className="w-full">
                   <Markdown content={props.post.content} />
                 </div>
-                <hr className='mt-12 mb-10 w-48 h-1 mx-auto my-4 transition-all bg-gray-200 hover:bg-gray-300 border-0 rounded' />
-                <div className="flex justify-between">
+                <hr className="mx-auto my-4 mt-12 mb-10 h-1 w-48 rounded border-0 bg-gray-200 transition-all hover:bg-gray-300" />
+                <div className="mb-4 flex justify-between">
                   <div>
-                    <div className="font-bold uppercase text-gray-300 font-sans">
+                    <div className="font-sans font-bold uppercase text-gray-300">
                       Last updated
                     </div>
-                    <div className="mt-2 text-gray-600 font-serif text-xl">
-                      <Moment format={'DD MMMM, YYYY'}>{props.post.meta.date}</Moment>
+                    <div className="mt-2 font-serif text-xl text-gray-600">
+                      <Moment format={'DD MMMM, YYYY'}>
+                        {props.post.meta.date}
+                      </Moment>
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold uppercase text-gray-300 font-sans">
+                    <div className="font-sans font-bold uppercase text-gray-300">
                       Hits
                     </div>
-                    <div className="mt-2 text-right text-gray-600 font-serif text-xl">
+                    <div className="mt-2 text-right font-serif text-xl text-gray-600">
                       <PostViews slug={props.post.slug} />
                     </div>
                   </div>
@@ -90,7 +91,7 @@ export default function About(props: Props) {
               <div className="col-span-12 md:col-span-3">
                 <div className="sticky top-4 mt-2 sm:mt-0">
                   {/* Table of contents */}
-                  <div className="rounded-2xl bg-gray-100 py-3 px-4 mt-2 mb-4">
+                  <div className="mt-2 mb-4 rounded-2xl bg-gray-100 py-3 px-4">
                     <div className="text-lg">Table of contents</div>
                     <TableOfContents />
                   </div>

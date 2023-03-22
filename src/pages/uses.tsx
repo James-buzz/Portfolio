@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout/Layout';
+import Layout from '@/components/common/Layout/Layout';
 import Head from 'next/head';
 
 export default function Uses() {
