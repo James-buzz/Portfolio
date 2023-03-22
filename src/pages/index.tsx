@@ -1,7 +1,7 @@
-import PostCard from '@/components/Card/Card';
-import Jumbotron from '@/components/Jumbotron/Jumbotron';
-import Layout from '@/components/Layout/Layout';
-import SocialLink from '@/components/SocialLink/SocialLink';
+import PostCard from '@/components/common/Card/Card';
+import Layout from '@/components/common/Layout/Layout';
+import Jumbotron from '@/components/features/Jumbotron/Jumbotron';
+import SocialLink from '@/components/features/SocialLink/SocialLink';
 import { getAllPosts } from '@/lib/posts';
 import { Post } from '@/types/Post';
 import { GetStaticProps } from 'next';
@@ -14,7 +14,7 @@ interface Props {
 }
 export default function Home(props: Props) {
   const Background = dynamic(
-    () => import('@/components/Background/Background'),
+    () => import('@/components/common/Background/Background'),
     {
       ssr: false,
       loading: () => <></>,
