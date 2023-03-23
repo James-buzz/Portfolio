@@ -62,7 +62,7 @@ export default function Blog(props: Props) {
                 <div key={key} className="col-span-12 mb-4 md:col-span-4">
                   <PostCard
                     title={post.meta.title}
-                    date={post.meta.date}
+                    date={post.meta.publishedOn}
                     slug={post.slug}
                     image={require('../../../public/content/posts/' +
                       post.slug +

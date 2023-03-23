@@ -34,7 +34,7 @@ export default function About(props: Props) {
       <div className="pt-4 sm:pt-12">
         <div>
           <div className="text-center font-sans text-gray-700">
-            <Moment format={'D MMM YY'}>{props.post.meta.date}</Moment>,{' '}
+            <Moment format={'D MMM YY'}>{props.post.meta.publishedOn}</Moment>,{' '}
             {props.post.meta.category}
           </div>
           <div className="text-center font-serif text-7xl font-extrabold tracking-wide text-gray-700 transition-all hover:text-gray-800">
@@ -74,7 +74,7 @@ export default function About(props: Props) {
                     </div>
                     <div className="mt-2 font-serif text-xl text-gray-600">
                       <Moment format={'DD MMMM, YYYY'}>
-                        {props.post.meta.date}
+                        {props.post.meta.updatedOn}
                       </Moment>
                     </div>
                   </div>

@@ -14,7 +14,8 @@ type PostMeta = {
   title: string;
   abstract: string;
   category: PostCategory;
-  date: string;
+  publishedOn: string;
+  updatedOn: string;
   readingTime: {
     text: string;
     minutes: number;
@@ -34,3 +35,4 @@ function getPostCategories() {
 
 export type { PostMeta, Post };
 export { PostCategory, getPostCategories };
+

@@ -29,7 +29,8 @@ const getAllPosts = (): Post[] => {
         title: metaData.title as string,
         abstract: metaData.abstract as string,
         category: metaData.category as string,
-        date: metaData.date as string,
+        publishedOn: metaData.publishedOn as string,
+        updatedOn: metaData.updatedOn as string,
         readingTime: ReadingTime(content),
       },
       content: '',
@@ -37,7 +38,7 @@ const getAllPosts = (): Post[] => {
   });
 
   posts.sort((a: Post, b: Post) => {
-    return moment(a.meta.date) < moment(b.meta.date) ? 1 : -1;
+    return moment(a.meta.updatedOn) < moment(b.meta.updatedOn) ? 1 : -1;
   });
 
   return posts;
@@ -53,7 +54,8 @@ const getPostBySlug = (slug: string): Post => {
       title: metaData.title,
       abstract: metaData.abstract,
       category: metaData.category,
-      date: metaData.date,
+      publishedOn: metaData.publishedOn,
+      updatedOn: metaData.updatedOn,
       readingTime: ReadingTime(content),
     },
     content: content,
@@ -62,3 +64,4 @@ const getPostBySlug = (slug: string): Post => {
 
 // Export functions and references as globally accessible
 export { FOLDER, getFileNames, getAllPosts, getPostBySlug };
+
