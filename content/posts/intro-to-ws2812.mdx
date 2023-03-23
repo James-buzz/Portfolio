@@ -1,0 +1,98 @@
+---
+title: 'Introduction to WS2812 lightstrips'
+abstract: " In this blog post, we will dive into the details of WS2812 light strips, explaining what they are, how they work, and their many exciting applications."
+category: 'Guide'
+publishedOn: '2023-03-23T21:52:18Z'
+updatedOn: '2023-03-23T21:52:18Z'
+---
+
+Welcome to the world of WS2812 light strips! 
+These versatile and customisable LED strips have become very popular for various lighting 
+projects. 
+In this simple guide, we'll explain what they are, how they work, and some cool ways 
+to use them.
+
+<Heading slug="what-are-ws2812" as="h1">What are WS2812 Light Strips?</Heading>
+
+WS2812 light strips, sometimes called "Neopixel" strips, are a type of individually 
+controllable RGB LED strip. This means you can control each LED on the strip separately, 
+letting you create amazing lighting effects. Each strip is made up of several WS2812 
+integrated light sources, which are tiny LED chips with built-in control circuits.
+
+![WS2812](/content/posts/intro-to-ws2812/lightstrip.gif)
+
+<Heading slug="how-do-they-work" as="h1">How do they Work?</Heading>
+
+WS2812 light strips work using a unique communication protocol. 
+Each WS2812 LED module has a tiny built-in microcontroller that receives, 
+processes, and forwards data signals along the strip. 
+This allows you to precisely control the colour and brightness of each LED.
+
+The communication protocol uses a single data line to send information to the LEDs. 
+This data line carries a series of pulses that tell each LED what colour and brightness 
+to be. 
+The microcontroller in each WS2812 module reads these pulses, sets the LED's colour 
+and brightness, and forwards the remaining data down the line. 
+This clever system is what makes WS2812 light strips so versatile and customisable.
+
+<Frame height={400} src="//jsfiddle.net/James_buzz/4couyk9v/64/embedded/result/dark/"></Frame>
+
+<Heading slug="where-can-they-be-used" as="h1">Where are they used?</Heading>
+
+WS2812 light strips are popular for many different uses, including:
+
+- <b>Home Decoration:</b> Use WS2812 light strips to create mood lighting, highlight features in your home, or add a splash of colour to any room. They're also great for making custom holiday decorations.
+- <b>Stage and Event Lighting:</b> Their ability to create complex lighting effects makes WS2812 light strips perfect for stage lighting or as part of larger light installations at events, concerts, or art exhibitions.
+- <b>Wearables and Fashion:</b> WS2812 light strips are flexible and low power, so they're great for integrating into clothing, accessories, and wearable devices. This has led to their use in fashion shows, costumes, and interactive clothing.
+- <b>Automotive Lighting:</b> Use WS2812 light strips to create custom car lighting, both inside and outside your vehicle.
+- <b>Gaming and Computer Accessories:</b> Gamers and computer enthusiasts love using WS2812 light strips to create unique keyboard backlights, PC case lighting, and other peripherals.
+
+<Heading slug="history" as="h1">A brief history</Heading>
+
+WS2812 light strips have their roots in the development of addressable RGB LEDs. 
+RGB (Red, Green, Blue) LEDs, which emerged in the 1990s, could produce a wide range 
+of colours by combining the three primary colours. 
+However, controlling each LED independently within a strip was complex and limited their 
+practical uses.
+
+In 2011, WorldSemi introduced the WS2811 LED driver, which made it possible to control RGB
+LEDs using a single data line. This led to the creation of flexible, addressable LED strips.
+However, the WS2811 driver was a separate chip that needed to be connected to the RGB LEDs.
+
+In 2013, WorldSemi revolutionised the world of addressable LEDs by introducing the WS2812, 
+an integrated light source that combined an RGB LED and a control circuit in one tiny 
+package. This made the manufacturing process simpler, reduced the size of each module, 
+and allowed for higher-density LED arrangements on strips. WS2812 light strips quickly 
+became popular thanks to their ease of use, flexibility,
+
+<Heading slug="Birth" as="h1">Light strip projects</Heading>
+
+WS2812 light strips have inspired countless creators to develop innovative projects 
+showcasing the full potential of these programmable LEDs. 
+Here are three impressive projects from the WS2812 community:
+
+![home-application](/content/posts/intro-to-ws2812/home.png)
+
+
+- Under Desk Lighting: Installing a WS2812 light strip under a desk can transform any workspace into a personalised, visually appealing, and productive environment. By using a microcontroller and a simple user interface, you can easily adjust colours, brightness, and even animations to create the perfect atmosphere for work or relaxation.
+
+For a detailed tutorial on creating your own under desk lighting with WS2812 light strips, check out this step-by-step guide:
+<Link href="https://www.youtube.com/watch?v=GZjS51yBV4s">Under Desk Lighting Tutorial</Link>
+
+- Music-Reactive Lighting with LedFX: Music-reactive lighting synchronises the LED strip's colours and patterns with the beats and rhythms of the music. This is achieved using LedFX, an open-source software that analyses audio input and generates corresponding lighting effects for WS2812 light strips. The result is a captivating, immersive audio-visual experience that can elevate any party, event, or personal entertainment setup.
+
+To learn more about setting up music-reactive lighting with LedFX and WS2812 light strips,
+visit the LedFX GitHub repository for instructions and documentation: 
+<Link href="https://github.com/LedFx/LedFx">LedFX GitHub Repository</Link>
+
+- Ambilight-Inspired Home Lighting System: This project involves installing WS2812 light strips around the perimeter of a TV or monitor, creating a dynamic, immersive backlight that extends the on-screen colours onto the surrounding walls. The effect enhances the viewing experience by reducing eye strain, improving perceived contrast, and creating a more immersive atmosphere.
+
+For an in-depth tutorial on building your own Ambilight-inspired home lighting system using
+WS2812 light strips, follow this video:
+<Link href="https://www.youtube.com/watch?v=nzDnr76fZCc">DIY Ambilight Tutorial</Link>
+
+
+These community showcase projects demonstrate the incredible creative potential of WS2812
+light strips. 
+By exploring these examples and the countless other projects developed by enthusiasts
+around the world, you can find inspiration for your own innovative WS2812 light strip creations!

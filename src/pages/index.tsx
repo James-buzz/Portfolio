@@ -64,7 +64,7 @@ export default function Home(props: Props) {
                 >
                   <PostCard
                     title={post.meta.title}
-                    date={post.meta.date}
+                    date={post.meta.publishedOn}
                     slug={post.slug}
                     image={require(`../../public/content/posts/${post.slug}/thumbnail.png`)}
                     readingTime={post.meta.readingTime.text}
