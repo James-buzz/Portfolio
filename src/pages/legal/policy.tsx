@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
                     Privacy Policy
                 </h1>
                 <p className="mt-4 text-gray-700">
-                    Your privacy is important to us. This Privacy Policy explains how James.buzz, owned and operated by James (the "Owner"), collects, uses, and discloses your personal information when you access or use our website. By using the website, you agree to the collection and use of information in accordance with this Privacy Policy.
+                    Your privacy is important to us. This Privacy Policy explains how James.buzz, owned and operated by James (the &quot;Owner&quot;), collects, uses, and discloses your personal information when you access or use our website. By using the website, you agree to the collection and use of information in accordance with this Privacy Policy.
                 </p>
                 <h2 className="text-xl font-medium mt-8">Information Collection and Use</h2>
                 <p className="mt-4 text-gray-700">
@@ -45,7 +45,7 @@ export default function PrivacyPolicy() {
                 <h2 className="text-xl font-medium mt-8">Links to Other Websites</h2>
                 <p className="mt-4 text-gray-700">
                     Our website may contain links to other
-                    websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's website. We strongly advise you to review the privacy policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites or services.
+                    websites that are not operated by us. If you click on a third-party link, you will be directed to that third party&apos;s website. We strongly advise you to review the privacy policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites or services.
                 </p>
                 <h2 className="text-xl font-medium mt-8">Children@apos;s Privacy</h2>
                 <p className="mt-4 text-gray-700">

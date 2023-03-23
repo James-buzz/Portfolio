@@ -16,7 +16,7 @@ export default function Uses() {
                 </p>
                 <h2 className="text-xl font-medium mt-8">Analytics and Cookies</h2>
                 <p className="mt-4 text-gray-700">
-                    James.buzz uses analytics provided by Vercel to collect data about visitors&apos; usage patterns and preferences. We also use cookies to enhance users' capabilities and provide certain features on the website. By using the website, you consent to the collection and use of this information in accordance with our Privacy Policy.
+                    James.buzz uses analytics provided by Vercel to collect data about visitors&apos; usage patterns and preferences. We also use cookies to enhance users&apos; capabilities and provide certain features on the website. By using the website, you consent to the collection and use of this information in accordance with our Privacy Policy.
                 </p>
                 <h2 className="text-xl font-medium mt-8">Disclaimer</h2>
                 <p className="mt-4 text-gray-700">
