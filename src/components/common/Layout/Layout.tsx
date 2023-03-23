@@ -18,7 +18,7 @@ const Layout: React.FC<Props> = (props) => {
       </Head>
       <NextSeo title={props.title} description={props.description} />
       {/* Include HTML code outside of the wrapper */}
-      <div>{props.outside}</div>
+      <div style={{}}>{props.outside}</div>
       {/* HTML Content */}
       <div
         id="wrapper"

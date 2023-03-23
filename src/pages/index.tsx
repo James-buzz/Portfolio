@@ -22,7 +22,7 @@ export default function Home(props: Props) {
   );
   return (
     <Layout
-      outside={<Background />}
+      outside={<Background speed={60} />}
       title="James.buzz"
       description="James is a self-taught Software Developer and a full-time Electrical Engineer. I blog about my projects and share tips about my latest hikes."
     >

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-interface Props {}
+interface Props { }
 const Footer: React.FC<Props> = () => {
   return (
     <div className="mt-12 w-full border-t border-gray-200 pt-8 pb-12 text-sm">
@@ -11,7 +11,7 @@ const Footer: React.FC<Props> = () => {
               © <div className="ml-1 font-bold">2022</div>
             </div>
             <Link href="/">
-              <div className="link cursor-pointer">James.buzz</div>
+              <div className="inline link cursor-pointer">James.buzz</div>
             </Link>
           </div>
           <div className="mr-10">
@@ -19,8 +19,21 @@ const Footer: React.FC<Props> = () => {
               <div className="font-bold">Social</div>
             </div>
             <Link href="https://github.com/James-buzz">
-              <div className="link cursor-pointer">Github</div>
+              <div className="inline link cursor-pointer">Github</div>
             </Link>
+          </div>
+          <div className="mr-10">
+            <div>
+              <div className="font-bold">Legal</div>
+            </div>
+            <div className="flex gap-4">
+              <Link href="/legal/policy">
+                <div className="inline link cursor-pointer">Privacy policy</div>
+              </Link>
+              <Link href="/legal/terms">
+                <div className="inline link cursor-pointer">Terms and conditions</div>
+              </Link>
+            </div>
           </div>
         </div>
         <div></div>
